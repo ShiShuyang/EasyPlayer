@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img">
+<title>简放 · 环轨 · 视频文件</title>
+<g transform="translate(-6 0)">
+  <defs>
+  <linearGradient id="file" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#23455f"/>
+    <stop offset="1" stop-color="#102a35"/>
+  </linearGradient>
+  </defs>
+  <path fill="url(#file)" d="M20 17a9 9 0 0 1 9-9h31a8 8 0 0 1 5.7 2.3l20 20A8 8 0 0 1 88 36v43a9 9 0 0 1-9 9H29a9 9 0 0 1-9-9Z"/>
+  <path fill="#49cfbc" d="M60 8h.5c2 0 3.8.8 5.2 2.3l20 20A8 8 0 0 1 88 36v.5H67a7 7 0 0 1-7-7Z"/>
+  <path fill="none" stroke="#3d6385" stroke-width="2" d="M21 17a8 8 0 0 1 8-8h31a7 7 0 0 1 5 2l20 20a7 7 0 0 1 2 5v43a8 8 0 0 1-8 8H29a8 8 0 0 1-8-8Z"/>
+  <rect x="32" y="45" width="44" height="30" rx="7" fill="#76f8d5"/>
+  <path d="M51 52.7a1.2 1.2 0 0 0-1.8 1v12.6a1.2 1.2 0 0 0 1.8 1l10-6.3a1.2 1.2 0 0 0 0-2Z" fill="#102a35"/>
+</g>
+</svg>

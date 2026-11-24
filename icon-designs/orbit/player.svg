@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img">
+<title>简放 · 环轨 · 播放器</title>
+<defs>
+<linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+  <stop stop-color="#193755"/>
+  <stop offset="1" stop-color="#0c162d"/>
+</linearGradient>
+<linearGradient id="orbit" x1="0" y1="0" x2="1" y2="1">
+  <stop stop-color="#64f7d5"/>
+  <stop offset="1" stop-color="#349ee9"/>
+</linearGradient>
+</defs>
+<rect x="5" y="5" width="86" height="86" rx="25" fill="url(#base)"/>
+<rect x="5.75" y="5.75" width="84.5" height="84.5" rx="24.25" fill="none" stroke="#466b89" stroke-opacity=".55" stroke-width="1.5"/>
+<path d="M23 47a26 26 0 0 1 46-17m4 19a26 26 0 0 1-47 15" fill="none" stroke="#526e8c" stroke-width="3.2" stroke-linecap="round"/>
+<ellipse cx="48" cy="48" rx="33" ry="12.4" transform="rotate(-27 48 48)" fill="none" stroke="url(#orbit)" stroke-width="4.5"/>
+<path d="M42 32.5a3.8 3.8 0 0 0-5.7 3.3v24.4a3.8 3.8 0 0 0 5.7 3.3l21-12.2a3.8 3.8 0 0 0 0-6.6Z" fill="#f3fffc"/>
+<circle cx="74" cy="31" r="4.3" fill="#97ffe7"/>
+</svg>

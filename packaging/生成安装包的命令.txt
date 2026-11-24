@@ -1,0 +1,1 @@
+在powershell中：powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File ".\build-installer.ps1"
