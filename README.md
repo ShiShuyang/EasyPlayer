@@ -4,7 +4,7 @@
   <img src="icon-designs/ribbon/player.svg" alt="简放图标" width="144">
 </div>
 
-一个极简 Windows 桌面播放器。Python 负责界面、快捷键和播放列表，PySide6 的 Qt Multimedia 使用 FFmpeg 后端处理音视频。
+一个极简 Windows 桌面播放器，支持视频播放和全景视频播放。Python 负责界面、快捷键和播放列表，PySide6 的 Qt Multimedia 使用 FFmpeg 后端处理音视频。
 
 代码都是GPT 6.2（Sol+Astra）写的。我就是一个写提示词的。
 
