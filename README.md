@@ -1,11 +1,28 @@
 # 简放（EasyPlayer）
 
+<div align="center">
+![简放图标](icon-designs/ribbon/player.svg)
+</div>
+
 一个极简 Windows 桌面播放器。Python 负责界面、快捷键和播放列表，PySide6 的 Qt Multimedia 使用 FFmpeg 后端处理音视频。
+
 代码都是GPT 6.2（Sol+Astra）写的。
 
-网页版全景播放器是一个HTML播放器，主要是https://haujetzhao.github.io/Panorama-Viewer-HTML/写的。我按照本人习惯优化了少量操作和镜头。项目太小就放在一起了。这个网页播放器和这个Windows桌面播放器无关。
+**视频播放**
 
-## 启动
+![视频播放](cover.jpg)
+
+**全景播放**
+
+![全景播放](cover360.jpg)
+
+
+## Windows x64 安装
+可以在Release中安装。安装时可分别关联简放支持的全部音频格式或全部视频格式。勾选后会按扩展名设置常规文件关联。未勾选的类别仍可在「打开方式」中选择简放。Windows 明确保存的用户默认应用优先。同一账户卸载时，只恢复仍指向本次安装的关联。
+
+安装包包含 Python、Qt 和 FFmpeg。如果新电脑提示缺少 `MSVCP140.dll` 或 `VCRUNTIME140.dll`，请安装 [Microsoft Visual C++ x64 运行库](https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist)。
+
+## 脚本方式启动
 
 从工作区根目录安装依赖并启动，安装只需一次。
 
@@ -16,22 +33,16 @@
 
 也可双击 `start-player.cmd` 启动。
 
-## Windows x64 安装包
+## 打包为安装包
 
-打包完成后，运行 `release\EasyPlayer-1.0.4-Setup-x64.exe`。首次安装可自选目录，默认位置为 `C:\Program Files\EasyPlayer`。再次安装时会在已登记的有效目录中升级，并保留原有文件关联。
-
-安装时可分别关联简放支持的全部音频格式或全部视频格式。勾选后会按扩展名设置常规文件关联。未勾选的类别仍可在「打开方式」中选择简放。Windows 明确保存的用户默认应用优先。同一账户卸载时，只恢复仍指向本次安装的关联。
-
-安装包包含 Python、Qt 和 FFmpeg。如果新电脑提示缺少 `MSVCP140.dll` 或 `VCRUNTIME140.dll`，请安装 [Microsoft Visual C++ x64 运行库](https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist)。
-
-如需重新打包，使用支持 `amd64-unicode` 目标的 NSIS。准备好编译器后，从工作区根目录运行以下命令。
+重新打包，使用支持 `amd64-unicode` 目标的 NSIS。准备好编译器后，从工作区根目录运行以下命令。
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r .\packaging\requirements-build.txt
-.\packaging\build-installer.ps1
+powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File ".\packaging\build-installer.ps1"
 ```
+此外包含`makensis.exe`的`mingw64`文件夹路径为`/.setup-tools/msys/mingw64`。
 
-使用便携版 NSIS 时，可通过 `-NsisCompiler` 传入 `makensis.exe` 的完整路径。
 
 ## 操作
 
@@ -66,3 +77,6 @@
 打开等距柱状投影（equirectangular）的单目 360° 视频后，点击控制条上的「全景」。简放会记住上次是否开启全景以及所用的缩放程度。
 
 在全景模式中，按住鼠标左键拖动画面，或按 `W` / `A` / `S` / `D` 向上、左、下、右转向。`Q` 放大，`E` 缩小。视角越宽，播放器越会压缩画面边缘，减轻拉伸。单击暂停、双击全屏和滚轮调音量可照常使用。
+
+## 网页版全景播放器
+网页版全景播放器是一个HTML播放器，主要是https://haujetzhao.github.io/Panorama-Viewer-HTML/ 写的。我按照本人习惯优化了少量操作和镜头。项目太小就放在一起了。这个网页播放器和这个Windows桌面播放器无关。

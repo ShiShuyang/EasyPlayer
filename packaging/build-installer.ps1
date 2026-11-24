@@ -1,7 +1,7 @@
 ﻿param(
     [string]$NsisCompiler,
     [ValidatePattern('^[0-9]+\.[0-9]+\.[0-9]+$')]
-    [string]$Version = '1.0.4'
+    [string]$Version = '1.0.0'
 )
 
 $ErrorActionPreference = 'Stop'
