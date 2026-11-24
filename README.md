@@ -1,12 +1,12 @@
 # 简放（EasyPlayer）
 
 <div align="center">
-![简放图标](icon-designs/ribbon/player.svg)
+  <img src="icon-designs/ribbon/player.svg" alt="简放图标" width="144">
 </div>
 
 一个极简 Windows 桌面播放器。Python 负责界面、快捷键和播放列表，PySide6 的 Qt Multimedia 使用 FFmpeg 后端处理音视频。
 
-代码都是GPT 6.2（Sol+Astra）写的。
+代码都是GPT 6.2（Sol+Astra）写的。我就是一个写提示词的。
 
 **视频播放**
 
@@ -41,7 +41,7 @@
 .\.venv\Scripts\python.exe -m pip install -r .\packaging\requirements-build.txt
 powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File ".\packaging\build-installer.ps1"
 ```
-此外包含`makensis.exe`的`mingw64`文件夹路径为`/.setup-tools/msys/mingw64`。
+此外包含`makensis.exe`的`mingw64`文件夹路径为`/.setup-tools/msys/mingw64`。（此打包工具未上传github。）
 
 
 ## 操作
